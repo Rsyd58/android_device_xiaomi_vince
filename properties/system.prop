@@ -42,8 +42,13 @@ persist.vendor.ims.disableDebugDataPathLogs=1
 persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableSigHandler=1
 
+# Media Transcode
+persist.sys.fuse.transcode_user_control=true
+persist.sys.fuse.transcode_enabled=false
+
 # Display
 ro.surface_flinger.enable_frame_rate_override=false
+vendor.display.perf_hint_window=50
 ro.egl.blobcache.multifile=true
 ro.egl.blobcache.multifile_limit=33554432
 
