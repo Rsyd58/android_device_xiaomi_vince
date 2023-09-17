@@ -7,6 +7,7 @@ bluetooth.sco.disable_enhanced_connection=true
 
 # Dex2oat
 persist.bg.dexopt.enable=true
+pm.dexopt.shared=quicken
 
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
