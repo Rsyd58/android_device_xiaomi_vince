@@ -11,6 +11,9 @@ ro.vendor.qti.va_aosp.support=1
 # Cutoff voltage at 3400mV
 ro.cutoff_voltage_mv=3400
 
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.media.xml_variant.codecs=_vendor
