@@ -424,6 +424,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.c_shim@1.2 \
     android.hardware.radio.config@1.1-service.wrapper
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti-msm8953
+
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.basic
