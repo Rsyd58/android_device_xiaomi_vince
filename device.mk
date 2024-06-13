@@ -104,6 +104,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5 \
     camera.msm8953 \
     libdng_sdk.vendor
 
@@ -157,6 +158,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+PRODUCT_PACKAGES += \
+    liblzma.vendor
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -202,6 +206,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgui_shim \
     vendor.qti.hardware.camera.device@1.0
+
+PRODUCT_PACKAGES += \
+    libion.vendor
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -306,7 +313,10 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay
+    CarrierConfigOverlay \
+    libnetutils.vendor \
+    libsqlite.vendor \
+    libssl.vendor
 
 PRODUCT_PACKAGES += \
     libnetutils.vendor \
@@ -323,6 +333,9 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
+
+PRODUCT_PACKAGES += \
+    libpower.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
