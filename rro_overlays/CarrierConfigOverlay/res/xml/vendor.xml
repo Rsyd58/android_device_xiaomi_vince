@@ -110,6 +110,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_call_composer_supported_bool" value="false"/>
         <!-- Config for explicit call transfer support for an IMS call -->
         <boolean name="carrier_allow_transfer_ims_call_bool" value="true" />
+
+        <!-- If this is true, the SIM card (through Customer Service Profile EF file) will be
+         able to prevent manual operator selection. If false, this SIM setting will be
+         ignored and manual operator selection will always be available. See
+         CPHS4_2.WW6, CPHS B.4.7.1 for more information -->
+        <boolean name="csp_enabled_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
@@ -700,6 +706,30 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_carrier_cs_retry_available" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
     </carrier_config>
+	
+    <carrier_config mcc="452" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+	
+    <carrier_config mcc="452" mnc="02">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="452" mnc="04">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="452" mnc="05">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="452" mnc="06">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="452" mnc="08">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
 
     <carrier_config mcc="454" mnc="00">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1215,6 +1245,38 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="07">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="08">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="09">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="10">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="11">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="21">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="510" mnc="28">
+        <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="310" mnc="00">
