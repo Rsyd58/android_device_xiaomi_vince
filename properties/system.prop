@@ -1,5 +1,15 @@
+#
+# system.prop for msm8953
+#
+
+# Dex2oat
+persist.bg.dexopt.enable=true
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
+
+# Cutoff voltage at 3400mV
+ro.cutoff_voltage_mv=3400
 
 # Radio
 ro.telephony.block_binder_thread_on_incoming_calls=false
@@ -11,6 +21,23 @@ persist.dbg.wfc_avail_ovr=1
 persist.radio.data_con_rprt=1
 persist.radio.calls.on.ims=1
 persist.radio.VT_ENABLE=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugDataPathLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableSigHandler=1
 
 # Display
 ro.surface_flinger.enable_frame_rate_override=false
+
+# Perf
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+# set max background services
+ro.config.max_starting_bg=8
+
+# system property to accelerate Progressive Download using STA
+persist.mm.sta.enable=0
+
+# System Property to set gesture mode as default
+ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
