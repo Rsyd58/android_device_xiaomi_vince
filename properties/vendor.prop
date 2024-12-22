@@ -1,6 +1,7 @@
 #
 # vendor.prop for msm8953
 #
+
 # Audio
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
@@ -163,9 +164,10 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 ril.subscription.types=NV,RUIM
-ro.telephony.default_network=22,20
+ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
 vendor.service.qti.ims.enabled=1
 
 # SF
