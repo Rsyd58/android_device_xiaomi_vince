@@ -62,6 +62,8 @@ vendor.display.perf_hint_window=50
 vendor.display.disable_partial_split=1
 ro.egl.blobcache.multifile=true
 ro.egl.blobcache.multifile_limit=33554432
+persist.debug.sf.statistics=0
+debug.sf.enable_egl_image_tracker=0
 
 # Perf
 ro.vendor.qti.sys.fw.bservice_enable=true
