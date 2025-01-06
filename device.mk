@@ -19,7 +19,7 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    CertifiedPropsOverlay \
+    NavigationBarMode2ButtonOverlay \
     AndroidAMOverlay \
     AndroidConfigCommonOverlay \
     AndroidConfigOverlay \
@@ -484,6 +484,36 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Set our custom Audio
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=MiRemix.ogg \
+    ro.config.notification_sound=WaterDrop.ogg \
+    ro.config.alarm_alert=HomeComing.ogg
+
+# Samsung Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/media/audio/Galaxy_Bells.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Galaxy_Bells.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/HomeComing.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/HomeComing.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/HomeComing.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/HomeComing.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Morning_flower.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Morning_flower.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Over_the_horizon.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Over_The_Horizon.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Spaceline.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Spaceline.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Whistle.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Whistle.ogg
+
+# HyperOS 2.0 Default Wallpaper
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/SoftLight02.png:$(TARGET_COPY_OUT_VENDOR)/etc/SoftLight.png
+
+# HyperOS 2.0 Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/media/audio/Mi.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Mi.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/MiRemix.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/MiRemix.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/WaterDrop.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/WaterDrop.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/NotificationXylophone.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/NotificationXylophone.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Dewdrops.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Dewdrops.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Fireflies.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Fireflies.ogg \
+    $(LOCAL_PATH)/prebuilt/media/audio/Morning.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Morning.ogg
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)

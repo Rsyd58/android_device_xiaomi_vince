@@ -280,9 +280,6 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-     <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
-
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/framework.jar"</item>
@@ -348,6 +345,28 @@
    <bool name="config_sf_limitedAlpha">true</bool>
    <bool name="config_sf_slowBlur">true</bool>
    <bool name="device_idle_use_mode_manager">true</bool>
+   <bool name="config_adaptive_sleep_available">true</bool>
+   <bool name="config_dreamsEnabledByDefault">false</bool>
+   <bool name="config_avoidGfxAccel">false</bool>
+   <bool name="config_batterySaver_full_disableVibration">true</bool>
+   <bool name="config_batterySaver_full_enableAdjustBrightness">true</bool>
+   <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
+   <bool name="config_bg_current_drain_event_duration_based_threshold_enabled">true</bool>
+   <bool name="config_bg_current_drain_high_threshold_by_bg_location">true</bool>
+   <bool name="config_bg_current_drain_monitor_enabled">true</bool>
+   <bool name="config_bg_prompt_abusive_apps_to_bg_restricted">true</bool>
+   <bool name="config_bg_prompt_fgs_with_noti_to_bg_restricted">true</bool>
+   <bool name="config_disableShutdownVibrationInZen">true</bool>
+   <bool name="config_dozePickupGestureEnabled">false</bool>
+   <bool name="config_dreamsActivatedOnDockByDefault">false</bool>
+   <bool name="config_dreamsSupported">true</bool>
+   <bool name="config_enableAutoPowerModes">true</bool>
+   <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+   <bool name="config_navBarDefaultTransparent">true</bool>
+   <bool name="config_notificationCloseButtonSupported">true</bool>
+   <bool name="config_notificationHeaderClickableForExpand">true</bool>
+   <bool name="config_refreshRateSynchronizationEnabled">true</bool>
+   <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
@@ -416,5 +435,9 @@
 
     <!-- Whether to select voice/data/sms preference without user confirmation. -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
+
+    <!-- Minimum screen brightness setting allowed by the power manager.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">1.0</item>
 
 </resources>

@@ -125,9 +125,9 @@ else
         # use Google default LMK series for all 64-bit targets >=2GB.
         echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
-        # Enable oom_reaper
+        # Disable oom_reaper
         if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
-            echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
+            echo 0 > /sys/module/lowmemorykiller/parameters/oom_reaper
         fi
 
         # Set PPR parameters
@@ -272,16 +272,21 @@ case "$target" in
                     echo -n enable > $mode
                 done
 
-                #if the kernel version >=4.9,use the schedutil governor
-                #governor settings
-                echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-                echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us
-                echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us
-                #set the hispeed_freq
-                echo 1401600 > /sys/devices/system/cpu/cpufreq/schedutil/hispeed_freq
                 #default value for hispeed_load is 90, for 8953 and sdm450 it should be 85
-                echo 85 > /sys/devices/system/cpu/cpufreq/schedutil/hispeed_load
+                echo 85 > /sys/devices/system/cpu/cpufreq/walt/hispeed_load
                 echo 652800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+
+		# Delete Cache
+		rm -rf /data/data/com.android.systemui/cache/*
+		rm -rf /data/data/com.android.systemui/code_cache/*
+		rm -rf /data/user_de/0/com.android.systemui/cache/*
+		rm -rf /data/user_de/0/com.android.systemui/code_cache/*
+		rm -rf /data/user/0/com.android.systemui/cache/*
+		rm -rf /data/user/0/com.android.systemui/code_cache/*
+		rm -rf /data/cache/*
+		rm -rf /data/system/package_cache/*
+		rm -rf /data/resource-cache/*
+		rm -rf /data/system/graphicsstats/*
 
                 # Bring up all cores online
                 echo 1 > /sys/devices/system/cpu/cpu0/online
@@ -388,12 +393,8 @@ case "$target" in
 
             # configure governor settings for little cluster
             echo 1 > /sys/devices/system/cpu/cpu0/online
-            echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-            echo 1363200 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
             #default value for hispeed_load is 90, for sdm632 it should be 85
-            echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+            echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load
             # sched_load_boost as -6 is equivalent to target load as 85.
             echo -6 > /sys/devices/system/cpu/cpu0/sched_load_boost
             echo -6 > /sys/devices/system/cpu/cpu1/sched_load_boost
@@ -402,12 +403,8 @@ case "$target" in
 
             # configure governor settings for big cluster
             echo 1 > /sys/devices/system/cpu/cpu4/online
-            echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
-            echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
             #default value for hispeed_load is 90, for sdm632 it should be 85
-            echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
+            echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/walt/hispeed_load
             # sched_load_boost as -6 is equivalent to target load as 85.
             echo -6 > /sys/devices/system/cpu/cpu4/sched_load_boost
             echo -6 > /sys/devices/system/cpu/cpu5/sched_load_boost

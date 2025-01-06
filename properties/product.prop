@@ -1,0 +1,24 @@
+# Other
+ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+ro.netflix.signup=1
+ro.csc.spotify.music.referrerid=xiaomi_mobile
+ro.csc.spotify.music.partnerid=xiaomi_mobile
+dalvik.vm.ps-min-first-save-ms=8000
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.background-dex2oat-cpu-set=0,1,6,7
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.madvise.vdexfile.size=0
+dalvik.vm.madvise.odexfile.size=0
+dalvik.vm.madvise.artfile.size=0
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=40
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_heaviest_task=false
+dalvik.vm.debug.alloc=0
+ro.control_privapp_permissions=log
+persist.arm64.memtag.app.com.android.bluetooth=off
+pm.dexopt.shared=verify
+ro.config.ringtone=MiRemix.ogg
+ro.config.notification_sound=WaterDrop.ogg
+ro.config.alarm_alert=HomeComing.ogg
