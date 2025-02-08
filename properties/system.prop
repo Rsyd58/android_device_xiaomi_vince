@@ -18,7 +18,6 @@ vidc.enc.dcvs.extra-buff-count=2
 persist.vendor.console.silent.config=1
 
 # Dex2oat
-pm.dexopt.shared=verify
 dalvik.vm.dex2oat64.enabled=true
 
 # Disable MTE Async for system server
@@ -128,8 +127,6 @@ ro.secureboot.lockstate=locked
 ro.boot.verifiedbootstate=green
 ro.boot.flash.locked=1
 androidboot.flash.locked=1
-ro.crypto.state=encrypted
-ro.crypto.type=block
 init.svc.flash_recovery=stopped
 
 # Display
@@ -147,10 +144,6 @@ debug.cpurend.vsync=false
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.use_color_management=true
-debug.sf.early_phase_offset_ns=1500000
-debug.sf.early_app_phase_offset_ns=1500000
-debug.sf.early_gl_phase_offset_ns=3000000
-debug.sf.early_gl_app_phase_offset_ns=15000000
 ro.surface_flinger.set_display_power_timer_ms=10000
 ro.surface_flinger.set_touch_timer_ms=5000
 ro.surface_flinger.set_idle_timer_ms=9000
@@ -169,12 +162,6 @@ persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
 persist.sys.sf.color_mode=9
 
-# Storage
-ro.incremental.enable=true
-
-# TODO(b/120679683): disable RescueParty before all problem apps solved
-persist.sys.disable_rescue=true
-
 # Wi-Fi
 wifi.interface=wlan0
 
@@ -183,10 +170,6 @@ persist.hwc.enable_vds=1
 
 #Fixes fingerprint unlock delay
 persist.wm.enable_remote_keyguard_animation=0
-
-#Some devices have sdcardfs kernel panicing on 8.0
-#Disable for everyone for the moment
-ro.sys.sdcardfs=0
 
 #HWUI properties
 ro.hwui.disable_scissor_opt=false
@@ -205,15 +188,6 @@ media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 persist.mm.enable.prefetch=true
-
-# BT
-persist.vendor.btstack.aac_frm_ctl.enabled=true
-# Xiaomi ADD: BT_BluetoothFrame
-persist.vendor.service.bdroid.soc.alwayson=true
-#system prop for wipower support
-ro.bluetooth.emb_wp_mode=false
-ro.bluetooth.wipower=false
-# END BT_BluetoothFrame
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
