@@ -193,8 +193,4 @@ zygote.critical_window.minute=10
 # Other
 ro.vendor.perf.scroll_opt=1
 vendor.perf.framepacing.enable=1
-ro.control_privapp_permissions=log
-ro.config.ringtone=MiRemix.ogg
-ro.config.notification_sound=WaterDrop.ogg
-ro.config.alarm_alert=HomeComing.ogg
 ro.config.wallpaper=/system/vendor/etc/SoftLight.png
