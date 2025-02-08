@@ -363,8 +363,8 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh
 
 # RemovePackages
-PRODUCT_PACKAGES += \
-    RemovePackages
+#PRODUCT_PACKAGES += \
+#    RemovePackages
 
 # RIL
 PRODUCT_PACKAGES += \
