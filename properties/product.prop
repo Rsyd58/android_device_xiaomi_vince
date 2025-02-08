@@ -16,9 +16,5 @@ ro.lmk.upgrade_pressure=40
 ro.lmk.downgrade_pressure=60
 ro.lmk.kill_heaviest_task=false
 dalvik.vm.debug.alloc=0
-ro.control_privapp_permissions=log
 persist.arm64.memtag.app.com.android.bluetooth=off
-pm.dexopt.shared=verify
-ro.config.ringtone=MiRemix.ogg
-ro.config.notification_sound=WaterDrop.ogg
-ro.config.alarm_alert=HomeComing.ogg
+
