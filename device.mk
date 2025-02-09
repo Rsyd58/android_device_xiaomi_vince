@@ -502,5 +502,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/media/audio/Fireflies.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Fireflies.ogg \
     $(LOCAL_PATH)/prebuilt/media/audio/Morning.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Morning.ogg
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
