@@ -73,10 +73,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.print.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.print.xml \
     $(LOCAL_PATH)/prebuilt/vince.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vince.xml
 
-# ANT
-PRODUCT_PACKAGES += \
-    AntHalService
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
@@ -158,9 +154,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8953
 
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    memtrack.msm8953
+    vendor.qti.hardware.memtrack-service
 
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -257,14 +251,6 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -363,8 +349,8 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh
 
 # RemovePackages
-#PRODUCT_PACKAGES += \
-#    RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # RIL
 PRODUCT_PACKAGES += \
